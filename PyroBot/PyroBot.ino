@@ -63,7 +63,7 @@ void loop() {
   
   motorSpeed(yValuePi, xValuePi);
  
-  Serial.print(String(yAxisValue) + "," + String(xAxisValue) + ",");
+  Serial.println (String(yAxisValue) + "," + String(xAxisValue));
   delay(125);
   
 }
