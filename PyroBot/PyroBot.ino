@@ -61,7 +61,7 @@ void loop() {
   yValuePi = Serial.parseInt();
   xValuePi = Serial.parseInt();
   
-  remoteControl(yValuePi, xValuePi);
+  motorSpeed(yValuePi, xValuePi);
  
   Serial.print(String(yAxisValue) + "," + String(xAxisValue) + ",");
   delay(125);
