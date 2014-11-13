@@ -25,8 +25,8 @@
 
 //#define JOYPAD_AXIS_DEADZONE 	    10
 
-#define JOYPAD_Y_AXIS_DEADZONE      10          // motor speed
-#define JOYPAD_X_AXIS_DEADZONE      10          // steering
+#define JOYPAD_Y_AXIS_DEADZONE      10          // 
+#define JOYPAD_X_AXIS_DEADZONE      10          // 
 
 // Joypad
 volatile int16_t  xAxisValue    = 0;              // (left) -255 .. 255 (right)
@@ -68,11 +68,6 @@ void loop() {
   
 }
 
-void remoteControl(int power,int steering) {
-  if ( steering > abs(JOYPAD_X_AXIS_DEADZONE)) motorSpeed(power , (power / 2 ));
-  if ( steering < -abs(JOYPAD_X_AXIS_DEADZONE)) motorSpeed((power / 2), power);
-  if ( steering == 0 ) motorSpeed(power , power);  
-}
   
 void motorSpeed(int _speedA, int _speedB) {
   _speedA = constrain(_speedA, -MOTOR_MAX_SPEED, MOTOR_MAX_SPEED);
