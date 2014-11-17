@@ -19,7 +19,7 @@ while True:
     p = readData(dataIn.strip())
     
     print "**** start ****"
-    print p
+    print "|" + dataIn + "|"
     print "***** end *****"        
     
     # write data
